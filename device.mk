@@ -32,3 +32,5 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     fstab.qcom \
     init.display.guacamole.rc
+
+PRODUCT_PROPERTY_OVERRIDES += ro.apex.updatable=false
