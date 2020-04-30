@@ -10,6 +10,7 @@ DEVICE_PATH := device/oneplus/guacamole
 
 # Assert
 TARGET_OTA_ASSERT_DEVICE := OnePlus7Pro
+TARGET_BOOTLOADER_BOARD_NAME = OnePlus7Pro
 
 # Display
 TARGET_SCREEN_DENSITY := 560
