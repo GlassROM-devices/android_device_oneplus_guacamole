@@ -14,25 +14,6 @@ DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
     $(LOCAL_PATH)/overlay-lineage
 
-# A/B firmware
-AB_OTA_PARTITIONS += \
-    abl \
-    aop \
-    bluetooth \
-    cmnlib64 \
-    cmnlib \
-    devcfg \
-    dsp \
-    hyp \
-    keymaster \
-    LOGO \
-    modem \
-    qupfw \
-    storsec \
-    tz \
-    xbl_config \
-    xbl
-
 # Audio
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/audio/mixer_paths_11811.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths_11811.xml \
@@ -59,11 +40,3 @@ PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
 
 PRODUCT_PROPERTY_OVERRIDES += ro.apex.updatable=false
-define target-radio-files $(notdir \
-	$(wildcard $(LOCAL_PATH)/firmware/filesmap) \
-	$(wildcard $(LOCAL_PATH)/firmware/*.bin) \
-	$(wildcard $(LOCAL_PATH)/firmware/*.elf) \
-	$(wildcard $(LOCAL_PATH)/firmware/*.img) \
-	$(wildcard $(LOCAL_PATH)/firmware/*.mbn) \
-	)
-endef
