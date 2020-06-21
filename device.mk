@@ -28,7 +28,8 @@ PRODUCT_PACKAGES += \
 
 # Device init scripts
 PRODUCT_PACKAGES += \
-    fstab.qcom
+    fstab.qcom \
+    init.display.guacamole.rc
 
 # Vibrator
 PRODUCT_PACKAGES += \
